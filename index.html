@@ -1,17 +1,22 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spacelook Tech | Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@400;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
     <header id="header">
         <div class="logo">
-            <span class="logo-space">Space</span><span class="logo-look">look</span><span class="logo-tech">.tech</span>
+            <a href="#" class="logo">Lucas<span class="dot">.</span></a>
+            <!-- <span class="logo-space">Space</span><span class="logo-look">look</span><span class="logo-tech">.tech</span> -->
         </div>
         <nav>
             <ul class="nav-links">
@@ -32,27 +37,22 @@
             <div class="hero-content">
                 <h2 class="subtitle">Data Science & Analytics</h2>
                 <h1 class="title">Transformando <span class="highlight">Dados</span> em Visão Estratégica.</h1>
-                <p class="description">Descubra insights ocultos e impulsione suas decisões de negócios com a Spacelook Tech.</p>
+                <p class="description">Descobrindo insights ocultos e impulsionando decisões de negócios.</p>
                 <div class="hero-buttons">
                     <a href="#projects" class="btn btn-primary">Ver Projetos</a>
                     <a href="#about" class="btn btn-secondary">Conheça mais</a>
                 </div>
             </div>
-            <div class="hero-graphic">
-                <div class="orb orb-1"></div>
-                <div class="orb orb-2"></div>
-                <div class="glass-card main-glass">
-                    <i class="fas fa-chart-pie chart-icon"></i>
-                    <div class="glass-text">
-                        <span>Data Driven</span>
-                        <div class="progress-bar"><div class="progress" style="width: 85%;"></div></div>
+            <div class="hero-image" style="animation-delay: 0.2s;">
+                <div class="image-wrapper">
+                    <img src="assets/image.jpg" alt="Lucas - Data Science">
+                    <div class="floating-card card-1">
+                        <i class="fas fa-code"></i>
+                        <span>Python & SQL</span>
                     </div>
-                </div>
-                <div class="glass-card sub-glass flex">
-                    <i class="fas fa-database data-icon"></i>
-                    <div class="glass-text">
-                        <span>Analytics</span>
-                        <div class="pulse"></div>
+                    <div class="floating-card card-2">
+                        <i class="fas fa-chart-pie"></i>
+                        <span>Data Viz</span>
                     </div>
                 </div>
             </div>
@@ -67,14 +67,16 @@
             <div class="about-container">
                 <div class="about-text scroll-reveal">
                     <h3>Sou um Cientista/Analista de Dados apaixonado por extrair valor da informação.</h3>
-                    <p>Com foco em negócios, a Spacelook Tech nasceu da vontade de explorar dados como se fossem a vastidão do espaço: buscando sempre descobrir algo novo e impactante. Atuo em todo o ciclo de vida dos dados, desde a coleta e estruturação até a visualização e modelagem preditiva.</p>
+                    <p>Com foco em negócios, atuo em todo o ciclo de
+                        vida dos dados, desde a coleta e estruturação até a visualização e modelagem preditiva.</p>
                     <div class="skills-grid">
                         <div class="skill-item"><i class="fab fa-python"></i> Python</div>
                         <div class="skill-item"><i class="fas fa-database"></i> SQL</div>
-                        <div class="skill-item"><i class="fas fa-chart-bar"></i> Power BI</div>
-                        <div class="skill-item"><i class="fas fa-table"></i> Excel</div>
                         <div class="skill-item"><i class="fas fa-brain"></i> Machine Learning</div>
+                        <div class="skill-item"><i class="fas fa-robot"></i> Inteligência Artificial</div>
+                        <div class="skill-item"><i class="fas fa-chart-bar"></i> Power BI</div>
                         <div class="skill-item"><i class="fas fa-chart-line"></i> Data Viz</div>
+                        <div class="skill-item"><i class="fas fa-table"></i> Excel</div>
                     </div>
                 </div>
             </div>
@@ -87,23 +89,26 @@
                 <div class="divider"></div>
             </div>
             <div class="timeline scroll-reveal">
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h4>Graduação em Ciência de Dados / Estatística</h4>
-                        <span class="timeline-date">Universidade XYZ • 2020 - 2024</span>
-                        <p>Formação sólida em estatística, matemática aplicada e programação voltada para análise e modelagem de dados.</p>
-                    </div>
-                </div>
                 <!-- Add more timeline items as needed based on resume -->
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
-                        <h4>Certificação Avançada em Analytics</h4>
-                        <span class="timeline-date">Instituição ABC • 2023</span>
-                        <p>Especialização na criação de dashboards dinâmicos e pipelines de dados eficientes.</p>
+                        <h4>Pós-Graduação em Inteligência Artificial e Aprendizado de Máquina</h4>
+                        <span class="timeline-date">PUC MINAS • 2025 - 2026</span>
+                        <p>Especialização em IA e Machine Learning, com foco em desenvolvimento de soluções inovadoras e
+                            aplicadas ao mercado.</p>
                     </div>
                 </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h4>Graduação em Análise e Desenvolvimento de Sistemas</h4>
+                        <span class="timeline-date">UNICESUMAR • 2017 - 2020</span>
+                        <p> Formação sólida em desenvolvimento de software, com foco em análise e soluções de problemas
+                            através da tecnologia.</p>
+                    </div>
+                </div>
+
             </div>
         </section>
 
@@ -117,17 +122,19 @@
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
-                        <h4>Analista de Dados Pleno</h4>
-                        <span class="timeline-date">Empresa de Tecnologia • 2023 - Presente</span>
-                        <p>Desenvolvimento de painéis gerenciais no Power BI, automação de relatórios com Python e modelagem de dados em SQL. Redução de 40% no tempo de emissão de relatórios.</p>
+                        <h4>Cientista/Analista de Dados</h4>
+                        <span class="timeline-date">Consultoria em Dados • 2025 - Presente</span>
+                        <p>Desenvolvimento de dashboards interativos no Power BI, modelagem de dados em SQL e
+                            implementação de modelos de Machine Learning e soluções em Inteligência Artificial.</p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
-                        <h4>Cientista de Dados Jr</h4>
-                        <span class="timeline-date">Consultoria em Dados • 2021 - 2023</span>
-                        <p>Apoio na criação de modelos preditivos para churn de clientes e análise exploratória para campanhas de marketing.</p>
+                        <h4>Analista de Dados/ Desenvolvedor Web</h4>
+                        <span class="timeline-date">CLAM • 2023 - 2025</span>
+                        <p>Desenvolvimento de plataformas na web, dashboards interativos no Power BI, modelagem de dados
+                            em SQL e NoSQL e análise de dados usando Python.</p>
                     </div>
                 </div>
             </div>
@@ -136,77 +143,85 @@
         <!-- Projetos -->
         <section id="projects" class="section alt-bg">
             <div class="section-header">
-                <h2>Projetos de Data Science</h2>
+                <h2>Projetos</h2>
                 <div class="divider"></div>
                 <p class="section-subtitle">Dashboards e Visualizações de alto impacto.</p>
             </div>
             <div class="projects-grid">
                 <!-- Project 1 -->
-                <div class="project-card scroll-reveal">
+                <a href="https://github.com/LucasPeil/Power-BI-Analise-Vendas" target="_blank"
+                    class="project-card scroll-reveal">
                     <div class="project-img-wrapper">
-                        <img src="Dashboards/dashboard1.jpg" alt="Dashboard 1" class="project-img">
+                        <img src="Dashboards/Vendas.png" alt="Dashboard 1" class="project-img">
                         <div class="project-overlay">
-                            <i class="fas fa-search-plus"></i>
+                            <i class="fas fa-external-link-alt"></i>
                         </div>
                     </div>
                     <div class="project-info">
                         <h3>Análise de Vendas</h3>
-                        <p>Dashboard interativo para acompanhamento de KPIs de vendas corporativas.</p>
+                        <p>Dashboard interativo para acompanhar o desempenho das vendas da empresa.</p>
                         <div class="project-tags">
-                            <span>Power BI</span><span>SQL</span>
+                            <span>Power BI</span><span>Excel</span>
                         </div>
                     </div>
-                </div>
+                </a>
                 <!-- Project 2 -->
-                <div class="project-card scroll-reveal">
-                    <div class="project-img-wrapper" style="background: #1e1e24;" >
-                        <img src="Dashboards/dashboard2.png" alt="Dashboard 2" class="project-img" style="object-fit: contain;">
+                <a href="https://github.com/LucasPeil/Power-BI-Analise-Marketing" target="_blank"
+                    class="project-card scroll-reveal">
+                    <div class="project-img-wrapper" style="background: #1e1e24;">
+                        <img src="Dashboards/Marketing.png" alt="Dashboard 2" class="project-img"
+                            style="object-fit: contain;">
                         <div class="project-overlay">
-                            <i class="fas fa-search-plus"></i>
+                            <i class="fas fa-external-link-alt"></i>
                         </div>
                     </div>
                     <div class="project-info">
-                        <h3>Customer Success</h3>
-                        <p>Monitoramento de engajamento e saúde do cliente em tempo real.</p>
+                        <h3>Análise de campanhas de marketing</h3>
+                        <p>Análise de dados para entender o perfil dos clientes, seus padrões de consumo e a efetividade
+                            das campanhas de marketing</p>
                         <div class="project-tags">
-                            <span>Python</span><span>Tableau</span>
+                            <span>Power BI</span><span>Excel</span>
                         </div>
                     </div>
-                </div>
+                </a>
                 <!-- Project 3 -->
-                <div class="project-card scroll-reveal">
+                <a href="https://github.com/LucasPeil/Air-Passengers" target="_blank"
+                    class="project-card scroll-reveal">
                     <div class="project-img-wrapper">
-                        <img src="Dashboards/dashboard3.png" alt="Dashboard 3" class="project-img">
+                        <img src="Dashboards/Aviao.jpg" alt="Dashboard 3" class="project-img">
                         <div class="project-overlay">
-                            <i class="fas fa-search-plus"></i>
+                            <i class="fas fa-external-link-alt"></i>
                         </div>
                     </div>
                     <div class="project-info">
-                        <h3>Logística e Supply Chain</h3>
-                        <p>Painel de controle para acompanhamento de rotas e eficiência logística.</p>
+                        <h3>Análise de série temporal</h3>
+                        <p>Análise detalhada e modelagem preditiva de séries temporais utilizando o dataset Air
+                            Passengers.</p>
                         <div class="project-tags">
-                            <span>Excel</span><span>DAX</span>
+                            <span>Python</span><span>Pandas</span><span>Matplotlib</span><span>Numpy</span><span>Scikit-learn</span><span>Statsmodels</span>
                         </div>
                     </div>
-                </div>
+                </a>
                 <!-- Project 4 -->
-                <div class="project-card scroll-reveal">
+                <a href="https://github.com/LucasPeil/movies_analysis" target="_blank"
+                    class="project-card scroll-reveal">
                     <div class="project-img-wrapper">
-                        <img src="Dashboards/dashboard4.png" alt="Dashboard 4" class="project-img">
+                        <img src="Dashboards/Filmes.jpg" alt="Dashboard 4" class="project-img">
                         <div class="project-overlay">
-                            <i class="fas fa-search-plus"></i>
+                            <i class="fas fa-external-link-alt"></i>
                         </div>
                     </div>
                     <div class="project-info">
-                        <h3>Análise Financeira</h3>
-                        <p>Visão completa de fluxo de caixa, DRE e projeções orçamentárias.</p>
+                        <h3>Modelagem Preditiva de Bilheteria (Regressão Linear)</h3>
+                        <p>Desenvolvimento de modelo estatístico para quantificar o impacto do orçamento e da recepção
+                            do público no faturamento de produções cinematográficas.</p>
                         <div class="project-tags">
-                            <span>Power BI</span><span>Python</span>
+                            <span>Python</span><span>SQL</span><span>Pandas</span><span>Matplotlib</span><span>Numpy</span><span>Statsmodels</span>
                         </div>
                     </div>
-                </div>
+                </a>
                 <!-- Project 5 -->
-                <div class="project-card scroll-reveal">
+                <!-- <div class="project-card scroll-reveal">
                     <div class="project-img-wrapper">
                         <img src="Dashboards/dashboard5.png" alt="Dashboard 5" class="project-img">
                         <div class="project-overlay">
@@ -220,7 +235,7 @@
                             <span>Scikit-Learn</span><span>Streamlit</span>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </section>
 
@@ -233,42 +248,43 @@
             <div class="contact-container scroll-reveal">
                 <div class="contact-info">
                     <h3>Vamos construir soluções guiadas a dados?</h3>
-                    <p>Sinta-se à vontade para me contatar. Busco sempre novos desafios e oportunidades de usar os dados a favor do seu negócio.</p>
+                    <p>Sinta-se à vontade para me contatar. Busco sempre novos desafios e oportunidades de usar os dados
+                        a favor do seu negócio.</p>
                     <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <span>contato@spacelook.tech</span>
+                        <i class="fab fa-whatsapp"></i>
+                        <span>(53) 98115-7066</span>
                     </div>
                     <div class="contact-item">
                         <i class="fab fa-linkedin"></i>
-                        <span>linkedin.com/in/lucas-spacelook</span>
+                        <span>linkedin.com/in/lucas-peil-169a80239/</span>
                     </div>
                     <div class="contact-item">
                         <i class="fab fa-github"></i>
-                        <span>github.com/spacelook</span>
+                        <span>github.com/LucasPeil</span>
                     </div>
                 </div>
-                <form class="contact-form" id="contactForm">
+                <form class="contact-form" id="whatsappForm">
                     <div class="form-group">
-                        <input type="text" id="name" required placeholder="Seu Nome">
+                        <input type="text" id="waName" required placeholder="Seu Nome">
                     </div>
                     <div class="form-group">
-                        <input type="email" id="email" required placeholder="Seu E-mail">
+                        <textarea id="waMessage" rows="5" maxlength="150" required
+                            placeholder="Sua Mensagem (máx. 150 caracteres)"></textarea>
+                        <div id="charCount" class="char-counter">0 / 150 caracteres</div>
                     </div>
-                    <div class="form-group">
-                        <textarea id="message" rows="5" required placeholder="Sua Mensagem"></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary submit-btn">Enviar Mensagem <i class="fas fa-paper-plane"></i></button>
+                    <button type="submit" class="btn btn-whatsapp submit-btn">Enviar pelo WhatsApp <i
+                            class="fab fa-whatsapp"></i></button>
                 </form>
             </div>
         </section>
     </main>
 
-    <footer>
+    <!-- <footer>
         <div class="footer-content">
             <div class="footer-logo">Spacelook<span>.tech</span></div>
             <p>&copy; 2026 Spacelook Tech. Todos os direitos reservados.</p>
         </div>
-    </footer>
+    </footer> -->
 
     <!-- Image Modal -->
     <div id="imageModal" class="modal">
@@ -279,4 +295,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>

@@ -37,14 +37,14 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             header.classList.remove('scrolled');
         }
-        
+
         // Active link highlighting
         highlightActiveLink();
     });
 
     // Scroll Reveal Animation
     const revealElements = document.querySelectorAll('.scroll-reveal');
-    
+
     const reveal = () => {
         const windowHeight = window.innerHeight;
         const revealPoint = 100;
@@ -64,9 +64,9 @@ document.addEventListener('DOMContentLoaded', () => {
     function highlightActiveLink() {
         const sections = document.querySelectorAll('section');
         const navLinks = document.querySelectorAll('.nav-links a:not(.btn-contact)');
-        
+
         let current = '';
-        
+
         sections.forEach(section => {
             const sectionTop = section.offsetTop;
             const sectionHeight = section.clientHeight;
@@ -87,12 +87,12 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
-            
+
             const targetId = this.getAttribute('href');
-            if(targetId === '#') return;
-            
+            if (targetId === '#') return;
+
             const targetElement = document.querySelector(targetId);
-            
+
             if (targetElement) {
                 window.scrollTo({
                     top: targetElement.offsetTop - 70, // offset for fixed header
@@ -100,60 +100,44 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             }
         });
-    });
+    });    // Lógica do Modal de Imagem foi removida, pois agora os projetos levam ao GitHub.
 
-    // Image Modal Logic
-    const modal = document.getElementById("imageModal");
-    const modalImg = document.getElementById("expandedImg");
-    const captionText = document.getElementById("caption");
-    const closeBtn = document.getElementsByClassName("close-modal")[0];
+    // Contact Form Submit Handling (WhatsApp)
+    const whatsappForm = document.getElementById('whatsappForm');
+    const waMessage = document.getElementById('waMessage');
+    const charCount = document.getElementById('charCount');
 
-    // Add click event to all project overlays
-    const overlays = document.querySelectorAll('.project-overlay');
-    overlays.forEach(overlay => {
-        overlay.addEventListener('click', function() {
-            const img = this.previousElementSibling; // The img element is right before the overlay
-            const title = this.parentElement.nextElementSibling.querySelector('h3').innerText;
-            
-            modal.style.display = "block";
-            modalImg.src = img.src;
-            captionText.innerHTML = title;
+    // Update character count on input
+    if (waMessage && charCount) {
+        waMessage.addEventListener('input', function () {
+            const currentLength = this.value.length;
+            charCount.textContent = `${currentLength} / 150 caracteres`;
+
+            // Optional: Change color when approaching limit
+            if (currentLength >= 140) {
+                charCount.style.color = '#ff6b6b'; // Redish color for alert
+            } else {
+                charCount.style.color = 'var(--text-muted)'; // Reset to default
+            }
         });
-    });
-
-    // Close modal when X is clicked
-    if (closeBtn) {
-        closeBtn.onclick = function() {
-            modal.style.display = "none";
-        }
     }
 
-    // Close modal when clicking outside the image
-    window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
-    }
-
-    // Contact Form Submit Handling
-    const contactForm = document.getElementById('contactForm');
-    if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
+    if (whatsappForm) {
+        whatsappForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            
-            const btn = contactForm.querySelector('button');
-            const originalText = btn.innerHTML;
-            
-            // Simple visual feedback
-            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
-            btn.disabled = true;
-            
-            setTimeout(() => {
-                alert('Mensagem enviada com sucesso! Entraremos em contato em breve.');
-                contactForm.reset();
-                btn.innerHTML = originalText;
-                btn.disabled = false;
-            }, 1500);
+
+            const name = document.getElementById('waName').value;
+            const message = document.getElementById('waMessage').value;
+
+            // ⚠️ IMPORTANTE: Substitua '5553981157066' pelo seu número real do WhatsApp
+            // Formato: DDI + DDD + Número (ex: 55 para Brasil, 11 para São Paulo)
+            const numeroWhatsApp = '5553981157066';
+
+            const textoFormatado = `Olá, meu nome é ${name}.%0A%0A${message}`;
+            const urlWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${textoFormatado}`;
+
+            window.open(urlWhatsApp, '_blank');
+            whatsappForm.reset();
         });
     }
 });
